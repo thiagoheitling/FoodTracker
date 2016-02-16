@@ -17,6 +17,11 @@
 		D0FB13731C71A85A00D1ACF1 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FB13721C71A85A00D1ACF1 /* Meal.swift */; };
 		D0FB137B1C71AFB100D1ACF1 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FB137A1C71AFB100D1ACF1 /* MealTableViewCell.swift */; };
 		D0FB137D1C71B4ED00D1ACF1 /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FB137C1C71B4ED00D1ACF1 /* MealTableViewController.swift */; };
+		D0FB137F1C726C3A00D1ACF1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0FB137E1C726C3A00D1ACF1 /* Parse.framework */; };
+		D0FB13831C726DD300D1ACF1 /* ParseAPIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FB13821C726DD300D1ACF1 /* ParseAPIKeys.swift */; };
+		D0FB13871C72868500D1ACF1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FB13861C72868500D1ACF1 /* SignUpViewController.swift */; };
+		D0FB13891C72CFF600D1ACF1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FB13881C72CFF600D1ACF1 /* ProfileViewController.swift */; };
+		D0FB138B1C72F93800D1ACF1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FB138A1C72F93800D1ACF1 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		087CDDC9ABD59F869E1B1183 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		33A245ACD600097ECBA98831 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		44AC09276DC98B4CF97805CC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D0FB134D1C716CD000D1ACF1 /* FoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0FB13501C716CD000D1ACF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0FB13521C716CD000D1ACF1 /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +52,12 @@
 		D0FB13721C71A85A00D1ACF1 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		D0FB137A1C71AFB100D1ACF1 /* MealTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MealTableViewCell.swift; path = ../MealTableViewCell.swift; sourceTree = "<group>"; };
 		D0FB137C1C71B4ED00D1ACF1 /* MealTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
+		D0FB137E1C726C3A00D1ACF1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "Pods/../build/Debug-iphoneos/Parse.framework"; sourceTree = "<group>"; };
+		D0FB13801C726D1200D1ACF1 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/../build/Debug-iphoneos/Pods.framework"; sourceTree = "<group>"; };
+		D0FB13821C726DD300D1ACF1 /* ParseAPIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseAPIKeys.swift; sourceTree = "<group>"; };
+		D0FB13861C72868500D1ACF1 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		D0FB13881C72CFF600D1ACF1 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D0FB138A1C72F93800D1ACF1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0FB137F1C726C3A00D1ACF1 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,12 +79,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A9ED50306B3A7640F93D050 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0FB13801C726D1200D1ACF1 /* Pods.framework */,
+				D0FB137E1C726C3A00D1ACF1 /* Parse.framework */,
+				33A245ACD600097ECBA98831 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D0FB13441C716CD000D1ACF1 = {
 			isa = PBXGroup;
 			children = (
 				D0FB134F1C716CD000D1ACF1 /* FoodTracker */,
 				D0FB13641C716CD100D1ACF1 /* FoodTrackerTests */,
 				D0FB134E1C716CD000D1ACF1 /* Products */,
+				5A9ED50306B3A7640F93D050 /* Frameworks */,
+				FD80A428882B85F5AEA75AF0 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,12 +112,16 @@
 		D0FB134F1C716CD000D1ACF1 /* FoodTracker */ = {
 			isa = PBXGroup;
 			children = (
+				D0FB13821C726DD300D1ACF1 /* ParseAPIKeys.swift */,
 				D0FB13501C716CD000D1ACF1 /* AppDelegate.swift */,
 				D0FB13721C71A85A00D1ACF1 /* Meal.swift */,
 				D0FB13701C718BA800D1ACF1 /* RatingControl.swift */,
 				D0FB137C1C71B4ED00D1ACF1 /* MealTableViewController.swift */,
-				D0FB137A1C71AFB100D1ACF1 /* MealTableViewCell.swift */,
 				D0FB13521C716CD000D1ACF1 /* MealViewController.swift */,
+				D0FB137A1C71AFB100D1ACF1 /* MealTableViewCell.swift */,
+				D0FB13861C72868500D1ACF1 /* SignUpViewController.swift */,
+				D0FB138A1C72F93800D1ACF1 /* LoginViewController.swift */,
+				D0FB13881C72CFF600D1ACF1 /* ProfileViewController.swift */,
 				D0FB13541C716CD000D1ACF1 /* Main.storyboard */,
 				D0FB13571C716CD000D1ACF1 /* Assets.xcassets */,
 				D0FB13591C716CD000D1ACF1 /* LaunchScreen.storyboard */,
@@ -108,6 +139,15 @@
 			path = FoodTrackerTests;
 			sourceTree = "<group>";
 		};
+		FD80A428882B85F5AEA75AF0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				44AC09276DC98B4CF97805CC /* Pods.debug.xcconfig */,
+				087CDDC9ABD59F869E1B1183 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,6 +158,7 @@
 				D0FB13491C716CD000D1ACF1 /* Sources */,
 				D0FB134A1C716CD000D1ACF1 /* Frameworks */,
 				D0FB134B1C716CD000D1ACF1 /* Resources */,
+				A0298C79824D35AD142D75F2 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -158,6 +199,12 @@
 				TargetAttributes = {
 					D0FB134C1C716CD000D1ACF1 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = V2VHL27V9A;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 					D0FB13601C716CD100D1ACF1 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -204,6 +251,24 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A0298C79824D35AD142D75F2 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D0FB13491C716CD000D1ACF1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -211,9 +276,13 @@
 			files = (
 				D0FB13731C71A85A00D1ACF1 /* Meal.swift in Sources */,
 				D0FB13531C716CD000D1ACF1 /* MealViewController.swift in Sources */,
+				D0FB13831C726DD300D1ACF1 /* ParseAPIKeys.swift in Sources */,
 				D0FB13711C718BA800D1ACF1 /* RatingControl.swift in Sources */,
 				D0FB13511C716CD000D1ACF1 /* AppDelegate.swift in Sources */,
+				D0FB13871C72868500D1ACF1 /* SignUpViewController.swift in Sources */,
+				D0FB13891C72CFF600D1ACF1 /* ProfileViewController.swift in Sources */,
 				D0FB137D1C71B4ED00D1ACF1 /* MealTableViewController.swift in Sources */,
+				D0FB138B1C72F93800D1ACF1 /* LoginViewController.swift in Sources */,
 				D0FB137B1C71AFB100D1ACF1 /* MealTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,23 +410,39 @@
 		};
 		D0FB136B1C716CD100D1ACF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44AC09276DC98B4CF97805CC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = FoodTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xcoders.FoodTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		D0FB136C1C716CD100D1ACF1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 087CDDC9ABD59F869E1B1183 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = FoodTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xcoders.FoodTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -404,6 +489,7 @@
 				D0FB136C1C716CD100D1ACF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0FB136D1C716CD100D1ACF1 /* Build configuration list for PBXNativeTarget "FoodTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +498,7 @@
 				D0FB136F1C716CD100D1ACF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

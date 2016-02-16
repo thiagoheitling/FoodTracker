@@ -12,7 +12,7 @@
             <objects>
                 <tableViewController id="2Hl-9K-WQc" customClass="MealTableViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" id="jIu-LL-Dhd">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -51,6 +51,13 @@
                             <outlet property="delegate" destination="2Hl-9K-WQc" id="l0P-ew-gJ6"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="my profile" id="S3o-XY-iJ8">
+                            <connections>
+                                <segue destination="fBF-Ku-nR6" kind="presentation" id="RPv-zw-UZ0"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Your Meals" id="QNJ-qP-taZ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="GBV-8B-B3S">
                             <connections>
@@ -58,10 +65,178 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q2R-wV-Sjk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="971" y="360"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="gW4-6R-ocw">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" id="aNO-WY-Yrj" customClass="LoginViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uvB-tC-Cje"/>
+                        <viewControllerLayoutGuide type="bottom" id="YxD-9q-EpC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Qe-pq-jB5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t0W-NM-9qe">
+                                <rect key="frame" x="200" y="120" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="oVW-x4-oBx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bb9-kJ-F97">
+                                <rect key="frame" x="200" y="180" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Nlg-hl-rEG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQU-xE-e3u">
+                                <rect key="frame" x="200" y="240" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="z1w-ix-XMI"/>
+                                </constraints>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="aNO-WY-Yrj" eventType="touchUpInside" id="fbZ-O4-egw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3a-8h-Hes">
+                                <rect key="frame" x="300" y="370" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="6S2-Id-hfZ"/>
+                                </constraints>
+                                <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <segue destination="Kcb-Ql-nR6" kind="presentation" id="sCV-6d-ceN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="not a user?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3c-Ep-6RT">
+                                <rect key="frame" x="211" y="375" width="80.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FoodTracker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8i-pc-JTt">
+                                <rect key="frame" x="214" y="40" width="172" height="38"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="t0W-NM-9qe" firstAttribute="top" secondItem="uvB-tC-Cje" secondAttribute="bottom" constant="100" id="5uf-FG-45o"/>
+                            <constraint firstItem="Q3a-8h-Hes" firstAttribute="top" secondItem="KQU-xE-e3u" secondAttribute="bottom" constant="100" id="8R6-KV-aac"/>
+                            <constraint firstItem="bb9-kJ-F97" firstAttribute="centerX" secondItem="9Qe-pq-jB5" secondAttribute="centerX" id="DnR-d7-r4B"/>
+                            <constraint firstItem="s8i-pc-JTt" firstAttribute="top" secondItem="uvB-tC-Cje" secondAttribute="bottom" constant="20" id="FZR-E3-MUY"/>
+                            <constraint firstItem="Q3a-8h-Hes" firstAttribute="leading" secondItem="S3c-Ep-6RT" secondAttribute="trailing" constant="8" id="GRE-Gs-PZN"/>
+                            <constraint firstItem="KQU-xE-e3u" firstAttribute="centerX" secondItem="9Qe-pq-jB5" secondAttribute="centerX" id="Q1q-ZE-RDG"/>
+                            <constraint firstItem="bb9-kJ-F97" firstAttribute="top" secondItem="t0W-NM-9qe" secondAttribute="bottom" constant="30" id="TBY-lt-EK8"/>
+                            <constraint firstItem="t0W-NM-9qe" firstAttribute="centerX" secondItem="9Qe-pq-jB5" secondAttribute="centerX" id="Wjp-9b-lz1"/>
+                            <constraint firstItem="s8i-pc-JTt" firstAttribute="centerX" secondItem="9Qe-pq-jB5" secondAttribute="centerX" id="f5d-gE-Afi"/>
+                            <constraint firstItem="Q3a-8h-Hes" firstAttribute="centerX" secondItem="9Qe-pq-jB5" secondAttribute="centerX" constant="50" id="iLK-tM-rE3"/>
+                            <constraint firstItem="KQU-xE-e3u" firstAttribute="top" secondItem="bb9-kJ-F97" secondAttribute="bottom" constant="30" id="iaS-GW-kUS"/>
+                            <constraint firstItem="S3c-Ep-6RT" firstAttribute="centerY" secondItem="Q3a-8h-Hes" secondAttribute="centerY" id="u9z-C9-nBe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="bb9-kJ-F97" id="s4t-1Y-0Fo"/>
+                        <outlet property="userNameTextField" destination="t0W-NM-9qe" id="aMf-dI-bnk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BP4-od-BRW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="-324"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="v01-E0-dSC">
+            <objects>
+                <viewController storyboardIdentifier="SignUpViewController" id="Kcb-Ql-nR6" customClass="SignUpViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1kz-qJ-Bf7"/>
+                        <viewControllerLayoutGuide type="bottom" id="NWT-EF-AYK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pvc-Og-wkg" customClass="PFSignUpView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vs2-Kf-x4K">
+                                <rect key="frame" x="200" y="284" width="200" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addpic" translatesAutoresizingMaskIntoConstraints="NO" id="GI8-W8-xXq">
+                                <rect key="frame" x="200" y="64" width="200" height="200"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="49N-8r-Dwu"/>
+                                    <constraint firstAttribute="width" constant="200" id="K5Y-dN-PL2"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ppT-IJ-wX0" appends="YES" id="yeI-c9-K34"/>
+                                </connections>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GGE-ob-N3F">
+                                <rect key="frame" x="200" y="324" width="200" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRX-lo-zlm">
+                                <rect key="frame" x="200" y="364" width="200" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="yhK-Mr-aY0"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xnf-Y6-mBp">
+                                <rect key="frame" x="200" y="464" width="200" height="30"/>
+                                <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUpButtonPressed:" destination="Kcb-Ql-nR6" eventType="touchUpInside" id="15l-X1-QJy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xnf-Y6-mBp" firstAttribute="width" secondItem="bRX-lo-zlm" secondAttribute="width" id="00K-3x-xeh"/>
+                            <constraint firstItem="GI8-W8-xXq" firstAttribute="top" secondItem="1kz-qJ-Bf7" secondAttribute="bottom" constant="44" id="9hF-uM-1r0"/>
+                            <constraint firstItem="GGE-ob-N3F" firstAttribute="top" secondItem="vs2-Kf-x4K" secondAttribute="bottom" constant="10" id="B1b-bD-frK"/>
+                            <constraint firstItem="vs2-Kf-x4K" firstAttribute="centerX" secondItem="Pvc-Og-wkg" secondAttribute="centerX" id="HzX-Mg-dSj"/>
+                            <constraint firstItem="Xnf-Y6-mBp" firstAttribute="centerX" secondItem="Pvc-Og-wkg" secondAttribute="centerX" id="ImR-Iq-fBw"/>
+                            <constraint firstItem="Xnf-Y6-mBp" firstAttribute="top" secondItem="bRX-lo-zlm" secondAttribute="bottom" constant="20" id="Ud1-QD-eXr"/>
+                            <constraint firstItem="bRX-lo-zlm" firstAttribute="top" secondItem="GGE-ob-N3F" secondAttribute="bottom" constant="10" id="XEn-vt-hKR"/>
+                            <constraint firstItem="vs2-Kf-x4K" firstAttribute="top" secondItem="GI8-W8-xXq" secondAttribute="bottom" constant="20" id="aWH-Bf-3HN"/>
+                            <constraint firstItem="vs2-Kf-x4K" firstAttribute="width" secondItem="GI8-W8-xXq" secondAttribute="width" id="aWf-yI-14D"/>
+                            <constraint firstItem="bRX-lo-zlm" firstAttribute="width" secondItem="GGE-ob-N3F" secondAttribute="width" id="fSo-eF-CtH"/>
+                            <constraint firstItem="bRX-lo-zlm" firstAttribute="centerX" secondItem="Pvc-Og-wkg" secondAttribute="centerX" id="hAe-4f-Oq7"/>
+                            <constraint firstItem="GGE-ob-N3F" firstAttribute="width" secondItem="vs2-Kf-x4K" secondAttribute="width" id="jmi-tc-zXB"/>
+                            <constraint firstItem="GGE-ob-N3F" firstAttribute="centerX" secondItem="Pvc-Og-wkg" secondAttribute="centerX" id="uNY-B2-oHr"/>
+                            <constraint firstItem="GI8-W8-xXq" firstAttribute="centerX" secondItem="Pvc-Og-wkg" secondAttribute="centerX" id="x7d-qZ-Csi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="foodOptionPickerView" destination="bRX-lo-zlm" id="GOT-wg-7KM"/>
+                        <outlet property="passwordTextField" destination="GGE-ob-N3F" id="Rlq-Xk-pzm"/>
+                        <outlet property="profileImageView" destination="GI8-W8-xXq" id="CN3-PM-osA"/>
+                        <outlet property="userNameTextField" destination="vs2-Kf-x4K" id="7XR-gC-g8b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4an-L4-j18" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ppT-IJ-wX0">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="Kcb-Ql-nR6" id="aX9-v1-dQM"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="965" y="-324"/>
         </scene>
         <!--New Meal-->
         <scene sceneID="tne-QT-ifu">
@@ -72,7 +247,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="mV4-Bo-TqL">
@@ -158,6 +333,65 @@
             </objects>
             <point key="canvasLocation" x="159" y="360"/>
         </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="dMM-Nh-M4y">
+            <objects>
+                <viewController id="fBF-Ku-nR6" customClass="ProfileViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gxf-3m-ZfE"/>
+                        <viewControllerLayoutGuide type="bottom" id="fOS-ky-Mse"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6jg-W7-r5x">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A4p-co-6U4">
+                                <rect key="frame" x="150" y="40" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="8xO-Sk-Dfo"/>
+                                    <constraint firstAttribute="height" constant="300" id="wUD-tz-c3E"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="food preference" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KSR-SF-F6A">
+                                <rect key="frame" x="150" y="395" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a5z-S9-eOQ">
+                                <rect key="frame" x="150" y="355" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDf-wi-heH">
+                                <rect key="frame" x="276" y="466" width="48" height="30"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutButtonPressed:" destination="fBF-Ku-nR6" eventType="touchUpInside" id="4Ad-Mm-Lhb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KSR-SF-F6A" firstAttribute="width" secondItem="a5z-S9-eOQ" secondAttribute="width" id="5Qf-Gc-hEL"/>
+                            <constraint firstItem="A4p-co-6U4" firstAttribute="centerX" secondItem="6jg-W7-r5x" secondAttribute="centerX" id="7RG-h3-Gjx"/>
+                            <constraint firstItem="a5z-S9-eOQ" firstAttribute="centerX" secondItem="6jg-W7-r5x" secondAttribute="centerX" id="8ap-qD-dfR"/>
+                            <constraint firstItem="a5z-S9-eOQ" firstAttribute="top" secondItem="A4p-co-6U4" secondAttribute="bottom" constant="15" id="IbG-DQ-8WD"/>
+                            <constraint firstItem="A4p-co-6U4" firstAttribute="top" secondItem="gxf-3m-ZfE" secondAttribute="bottom" constant="20" id="cfj-36-n0I"/>
+                            <constraint firstItem="KSR-SF-F6A" firstAttribute="top" secondItem="a5z-S9-eOQ" secondAttribute="bottom" constant="10" id="nns-PI-MP4"/>
+                            <constraint firstItem="a5z-S9-eOQ" firstAttribute="width" secondItem="A4p-co-6U4" secondAttribute="width" id="tmi-qj-LJ7"/>
+                            <constraint firstItem="KSR-SF-F6A" firstAttribute="centerX" secondItem="6jg-W7-r5x" secondAttribute="centerX" id="x8V-MH-eL6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="foodPreferenceTextField" destination="KSR-SF-F6A" id="FKO-hU-oFu"/>
+                        <outlet property="profilePictureImageView" destination="A4p-co-6U4" id="mFN-VR-EhQ"/>
+                        <outlet property="userNameTextField" destination="a5z-S9-eOQ" id="qnV-SV-LvX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3E8-XA-L97" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="533" y="1128"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="0Nl-Gn-0ud">
             <objects>
@@ -178,6 +412,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="addpic" width="64" height="64"/>
         <image name="defaultPhoto" width="540" height="540"/>
     </resources>
     <inferredMetricsTieBreakers>

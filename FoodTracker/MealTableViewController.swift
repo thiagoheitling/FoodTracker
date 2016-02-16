@@ -7,15 +7,25 @@
 //
 
 import UIKit
+import Parse
 
 class MealTableViewController: UITableViewController {
 
     // MARK: Properties
     
     var meals = [Meal]()
+    var user:PFUser!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if (PFUser.currentUser() == nil) {
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                
+                let loginViewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LoginVC") as UIViewController
+                self.presentViewController(loginViewController, animated: true, completion: nil)
+            })
+        }
         
         // Use the edit button item provided by the table view controller.
         navigationItem.leftBarButtonItem = editButtonItem()
@@ -29,8 +39,6 @@ class MealTableViewController: UITableViewController {
             // Load the sample data.
             loadSampleMeals()
         }
-        
- 
     }
     
     func loadSampleMeals() {
@@ -153,7 +161,6 @@ class MealTableViewController: UITableViewController {
         else if segue.identifier == "AddItem" {
             print("Adding new meal.")
         }
-        
     }
     
     // MARK: NSCoding
